@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 class SearchBar extends React.Component {
   state = {term: ''}
 
@@ -11,6 +12,7 @@ class SearchBar extends React.Component {
     event.preventDefault();
 
     // TODO: call callback from parent component
+    this.props.onFormSubmit(this.state.term);
   };
 
   render() {
